@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 17:34:41 by mel-bakh          #+#    #+#             */
-/*   Updated: 2026/02/07 19:37:26 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2026/02/07 19:53:27 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,17 @@ int main (int argc , char *argv[])
 	int len2 ; 
 	len1 = 0 ; 
 	len2 = 0 ; 
-	while (argv[3][len1])
+	while (argv[2][len1])
 		len1++ ;
-	printf("%d\n" , len1) ;
-	while (argv[4][len2])
+		
+	while (argv[3][len2])
 		len2++ ;
 
-	printf("%d\n" , len2) ;
-	// if (len2 != 1 || len1 != 1)
-	// {
-	// 	write(1,"\n",1);
-	// 	exit(0);
-	// }
+	if (len2 != 1 || len1 != 1)
+	{
+		write(1,"\n",1);
+		exit(0);
+	}
 
 	while (argv[1][i])
 	{
@@ -56,6 +55,7 @@ int main (int argc , char *argv[])
 			write(1,&argv[1][k], 1) ; 
 			k++ ;
 		}
+		write(1, "\n", 1); 
 		exit(0);
 	}
 	i = 0 ; 
@@ -68,5 +68,5 @@ int main (int argc , char *argv[])
 		write(1,&argv[1][i], 1) ; 
 		i++;
 	}
-	
+	write(1, "\n", 1);
 }

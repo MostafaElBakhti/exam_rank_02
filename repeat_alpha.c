@@ -26,8 +26,14 @@ int main (int argc , char *argv[])
     int count ; 
     while(argv[1][i])
     {
-        if ( (argv[1][i] >= 'a' && argv[1][i] <= 'z') || (argv[1][i] >= 'A' && argv[1][i] <= 'Z'))
-
+        while( (argv[1][i] >= 'a' && argv[1][i] <= 'z') || (argv[1][i] >= 'A' && argv[1][i] <= 'Z'))
+        {
+            if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+                count = argv[1][i] - 'a' + 1 ; 
+            else 
+                count = argv[1][i] - 'A' + 1 ; 
+            break ;
+        }
 
         while(count > 0)
         {

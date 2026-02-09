@@ -19,7 +19,7 @@ int main (int argc , char *argv[])
     if (argc != 2)
     {
         write(1, "\n", 1);
-        exit(0);
+        return (0);
     }
 
     int i = 0 ; 
@@ -34,11 +34,11 @@ int main (int argc , char *argv[])
                 count = argv[1][i] - 'A' + 1 ; 
         while(count > 0)
         {
-            printf("%c" , argv[1][i]) ; 
+            write(1, &argv[1][i], 1) ;
             count-- ; 
         }
         }else{
-            printf("%c" ,argv[1][i] ) ; 
+            write(1, &argv[1][i], 1) ;
         }
 
         count = 0 ; 
@@ -46,4 +46,5 @@ int main (int argc , char *argv[])
     }
 
     write(1, "\n", 1);
+    return (0);
 }

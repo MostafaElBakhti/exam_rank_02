@@ -25,11 +25,12 @@ int main(int argc ,char *argv[])
     {
         i++ ;
     }
-    i-- ;
+    
+    i--;
     int end = i ; 
     while (argv[1][i] != ' ' && argv[1][i] != '\t')
     {
-        i-- ; 
+        i--;
     }
     i++;
     

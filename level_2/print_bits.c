@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 13:35:48 by mel-bakh          #+#    #+#             */
-/*   Updated: 2026/02/15 13:35:48 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2026/02/15 23:52:02 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	print_bits(unsigned char octet)
 {
-    int i = 7 ; 
-    char bit ; 
-
-    while(i >= 0)
-    {
-        bit = ((octet >> i) & 1) + '0' ; 
-        write(1,&bit,1) ; 
-        i--;
-    }
+	int i = 7 ; 
+	char c ; 
+	while(i >= 0)
+	{
+		c = ((octet >> i) & 1) + '0' ; 
+		write(1,&c,1) ; 
+		i--;
+	}
 }
 
 int main ()
 {
     print_bits(2) ; 
 }
+

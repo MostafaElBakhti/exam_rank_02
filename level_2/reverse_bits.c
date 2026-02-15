@@ -10,28 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
+#include <unistd.h>
 
-// void	reverse_bits(unsigned char octet)
-// {
-//     int i = 7 ; 
-//     char bit ; 
+unsigned char	reverse_bits(unsigned char octet)
+{
+    unsigned char result = 0 ; 
+    unsigned char bit ; 
 
+    int i = 8 ; 
 
-//     write(1,&bit,1) ; 
-
-//     while (i >= 7)
-//     {
-//         bit = ((octet >> i ) & 1) + '0'; 
-//         if(bit == '0')
-
-//         i--;
-//     }
+    while (i--)
+    {
+        //      0000 0000          0000 0010
+        result = (result << 1 ) | (octet & 1 ) ; 
+        octet >>= 1 ; 
+    }
     
 
-// }
+}
 
-// int main()
-// {
-//     reverse_bits(2) ; 
-// }
+int main()
+{
+    reverse_bits(2) ;  
+}

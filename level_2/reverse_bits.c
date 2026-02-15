@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_bits.c                                       :+:      :+:    :+:   */
+/*   reverse_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/15 13:35:48 by mel-bakh          #+#    #+#             */
-/*   Updated: 2026/02/15 13:35:48 by mel-bakh         ###   ########.fr       */
+/*   Created: 2026/02/15 13:53:18 by mel-bakh          #+#    #+#             */
+/*   Updated: 2026/02/15 13:53:18 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
 
-void	print_bits(unsigned char octet)
-{
-    int i = 7 ; 
-    char bit ; 
-    while(i < 0)
-    {
-        bit = ((octet >> i) & 1) + '0' ; 
-        write(1,&bit,1) ; 
-        i--;
-    }
-}
+// void	reverse_bits(unsigned char octet)
+// {
+//     int i = 7 ; 
+//     char bit ; 
 
-int main ()
-{
-    print_bits(2) ; 
-}
+
+//     write(1,&bit,1) ; 
+
+//     while (i >= 7)
+//     {
+//         bit = ((octet >> i ) & 1) + '0'; 
+//         if(bit == '0')
+
+//         i--;
+//     }
+    
+
+// }
+
+// int main()
+// {
+//     reverse_bits(2) ; 
+// }

@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 00:15:04 by mel-bakh          #+#    #+#             */
-/*   Updated: 2026/02/17 00:38:03 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2026/02/17 00:39:07 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int has_seen(char c)
 {
 	static int arr[256] = {0} ;
 
-	if (arr[c] == 1)
+	if (arr[(unsigned char)c] == 1)
 		return 1 ; 
-	arr[c] = 1 ; 
+	arr[(unsigned char)c] = 1 ; 
 	return 0 ; 
 }
 

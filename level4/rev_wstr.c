@@ -21,20 +21,31 @@ int main(int argc, char **argv)
         return (0);
     }
     int i ;
-
+    int end;
     i = 0 ; 
     while (argv[1][i])
         i++;
-    
+    i--;
     while(i >= 0)
     {
-        if()
+        if(argv[1][i] == ' ' || argv[1][i] == '\t' || i == 0)
         {
+            if(i == 0)
+                end = i;
+            else 
+                end = i + 1 ;
+            
+            while (argv[1][end] && argv[1][end] != ' ' && argv[1][end] != '\t')
+            {
+                write(1, &argv[1][end], 1);
+                end++;
+            }
+
+            if( i > 0)
+                write(1, " ", 1);
             
         }
         i--;
     }
-    
-
     write(1, "\n", 1);
 }

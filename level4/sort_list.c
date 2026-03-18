@@ -45,3 +45,29 @@ t_list *sort_list(t_list *lst, int (*cmp)(int, int))
     }
     return lst;
 }
+
+t_list *sort_list(t_list *lst, int (*cmp)(int, int))
+{
+    t_list *current;
+    int swap ;
+    swap = 1;
+
+    int tmp;
+    while(swap)
+    {
+        swap = 0 ;
+        current = lst ;
+        while(current->next)
+        {
+            if((*cmp)(current->data , current->next->data) == 0)
+            {
+                tmp = current->data ; 
+                current->data = current->next->data ;
+                current->next->data = tmp ; 
+                swap = 1 ;
+            }
+            current = current->next ;
+        }
+    }
+    return lst ;
+}
